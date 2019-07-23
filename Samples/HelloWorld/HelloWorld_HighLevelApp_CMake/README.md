@@ -1,3 +1,17 @@
+# Sample: Building an Azure Sphere app with the Checked C clang compiler.
+
+This is a modified version of the below application that  shows how to 
+compile it using the Checked C clang compiler.  It assumes that the Checked C
+compiler has been installed on Windows in C:\Program Files\CheckedC-LLVM\bin\clang.exe.
+Right now the user cannot override this.
+
+We assume that you are building from the command-line. To run cmake, create a build subdirectory.  
+Cd to the build subdirectory and then invoke ..\setup-cmake.bat.  After that you can follow
+the remaining steps (i.e. run ninja).
+
+Current this fails with a linker error.  However, it does compile the C code with the Checked C 
+clang compiler, so you can find typechecking and static checking errors.
+
 # Sample: HelloWorld_HighLevelApp_CMake
 
 This sample shows how to use CMake to build an Azure Sphere high-level application. This repository contains a sample CMake project that uses the same code as the [Azure Sphere Blink template](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#build-and-run-the-blink-sample).
