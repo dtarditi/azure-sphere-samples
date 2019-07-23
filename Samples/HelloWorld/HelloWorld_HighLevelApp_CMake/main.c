@@ -24,6 +24,8 @@
 
 int main(void)
 {
+	_Ptr<int> dummy = 0;
+	dummy = 0;
     Log_Debug("Starting CMake Hello World application...\n");
 
     int fd = GPIO_OpenAsOutput(SAMPLE_LED, GPIO_OutputMode_PushPull, GPIO_Value_High);
