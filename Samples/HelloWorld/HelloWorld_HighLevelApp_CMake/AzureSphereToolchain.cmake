@@ -27,7 +27,8 @@ ELSE()
 ENDIF()
 
 SET(CMAKE_C_FLAGS_INIT "-target arm-poky-linux-musleabi -B \"${AZURE_SPHERE_SYSROOT_DIR}/tools/gcc\" -march=armv7ve -mthumb -mfpu=neon -mfloat-abi=hard \
--mcpu=cortex-a7 --sysroot=\"${AZURE_SPHERE_SYSROOT_DIR}\" -L \"${AZURE_SPHERE_SYSROOT_DIR}/usr/lib/arm-poky-linux-musleabi/8.2.0\"")
+-mcpu=cortex-a7 --sysroot=\"${AZURE_SPHERE_SYSROOT_DIR}\" -L \"${AZURE_SPHERE_SYSROOT_DIR}/usr/lib/arm-poky-linux-musleabi/8.2.0\" \
+-B \"${AZURE_SPHERE_SYSROOT_DIR}/usr/lib/arm-poky-linux-musleabi/8.2.0\"")
 SET(CMAKE_EXE_LINKER_FLAGS_INIT "-nodefaultlibs -pie -Wl,--no-undefined -Wl,--gc-sections")
 
 SET(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES "${AZURE_SPHERE_SYSROOT_DIR}/usr/include")

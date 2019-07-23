@@ -9,10 +9,6 @@ We assume that you are building from the command-line. To run cmake, create a bu
 Cd to the build subdirectory and then invoke ..\setup-cmake.bat.  After that you can follow
 the remaining steps (i.e. run ninja).
 
-Currently, we need to copy crtbeginS.o and crtendS.o from Microsoft Azure Sphere SDK\Sysroots\2\usr\lib\arm-poky-linux-musleabi\8.2.0
-to Azure Sphere SDK\Sysroots\2\user\lib to avoid a linker error.   We believe there is something
-wrong with the search order for libraries when linking.
-
 # Sample: HelloWorld_HighLevelApp_CMake
 
 This sample shows how to use CMake to build an Azure Sphere high-level application. This repository contains a sample CMake project that uses the same code as the [Azure Sphere Blink template](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#build-and-run-the-blink-sample).
