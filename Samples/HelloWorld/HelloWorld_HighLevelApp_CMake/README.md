@@ -9,8 +9,9 @@ We assume that you are building from the command-line. To run cmake, create a bu
 Cd to the build subdirectory and then invoke ..\setup-cmake.bat.  After that you can follow
 the remaining steps (i.e. run ninja).
 
-Current this fails with a linker error.  However, it does compile the C code with the Checked C 
-clang compiler, so you can find typechecking and static checking errors.
+Currently, we need to copy crtbeginS.o and crtendS.o from Microsoft Azure Sphere SDK\Sysroots\2\usr\lib\arm-poky-linux-musleabi\8.2.0
+to Azure Sphere SDK\Sysroots\2\user\lib to avoid a linker error.   We believe there is something
+wrong with the search order for libraries when linking.
 
 # Sample: HelloWorld_HighLevelApp_CMake
 
